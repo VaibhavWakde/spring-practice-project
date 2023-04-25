@@ -1,5 +1,5 @@
 package com.dailycodebuffer.Springboottutorial.controller;
-
+ 
 import com.dailycodebuffer.Springboottutorial.entity.Department;
 import com.dailycodebuffer.Springboottutorial.error.DepartmentNotFoundException;
 import com.dailycodebuffer.Springboottutorial.service.DepartmentService;

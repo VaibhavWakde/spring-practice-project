@@ -1,0 +1,64 @@
+server:
+  port: 8082
+
+spring:
+  profiles:
+    active: qa
+
+#  running sprinBoot with multi profile deployment
+#  java -jar Spring-boot-tutorial-1.0.0.jar --spring.profiles.active=prod
+
+---
+
+
+spring:
+  config:
+    activate:
+      on-profile: dev
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    password: Vaibhav@123
+    url: jdbc:mysql://localhost:3306/dailycodebuffer
+    username: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+welcome:
+  message: Welcome to Daily Code Buffer!!
+
+---
+
+spring:
+  config:
+    activate:
+      on-profile: qa
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    password: Vaibhav@123
+    url: jdbc:mysql://localhost:3306/dailycodebuffer-qa
+    username: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+welcome:
+  message: Welcome to Daily Code Buffer!!
+
+---
+
+spring:
+  config:
+    activate:
+      on-profile: prod
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    password: Vaibhav@123
+    url: jdbc:mysql://localhost:3306/dailycodebuffer-prod
+    username: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+welcome:
+  message: Welcome to Daily Code Buffer!!
