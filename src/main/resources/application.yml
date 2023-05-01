@@ -45,6 +45,13 @@ spring:
 welcome:
   message: Welcome to Daily Code Buffer!!
 
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+        exclude: "env,beans"
+
 ---
 
 spring:
